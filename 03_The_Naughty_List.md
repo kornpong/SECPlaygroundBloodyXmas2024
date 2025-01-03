@@ -67,6 +67,7 @@
 เราจะได้เรียนรู้เกี่ยวกับการใช้ LFI, Decode Base64, และเทคนิคการ **FUZZ** รวมทั้งการสร้าง RFI ผ่าน webshell ซึ่งล้วนเป็นทักษะสำคัญสำหรับการจัดการช่องโหว่ในโลก cybersecurity!  
 
 ---
+###### Written by Kornpong.m
 ###### #SECPlayground   #SECPlaygroundBloodyXMas2024 
 
 <a href="./"><<กลับหน้าหลัก</a>

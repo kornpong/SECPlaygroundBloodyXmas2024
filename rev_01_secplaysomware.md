@@ -74,6 +74,7 @@ sha256sum Keygen.exe
 4. **ไฟล์ที่ถูกสร้าง**: UNLOCK_README.txt
 
 ---
+###### Written by Kornpong.m
 ###### #SECPlayground   #SECPlaygroundBloodyXMas2024 
 
 <a href="./"><<กลับหน้าหลัก</a>  
