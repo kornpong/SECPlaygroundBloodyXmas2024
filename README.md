@@ -16,9 +16,10 @@
 ---
 
 ### หมวด Web Application 
-| โจทย์ | ระดับ |  |
+
+| โจทย์ | ระดับ | สถานะ |
 |----------|----------|----------|
-| [Bespoke Library](./01_Bespoke_Library_Writeup.md)  | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  | 
+| [Bespoke Library](./01_Bespoke_Library_Writeup)  | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  | 
 | [Bespoke Library2](./02_Bespoke_Library2_Writeup.md)  | ![](https://img.shields.io/badge/MEDIUM-orange)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |
 | [The Naughty List](./03_The_Naughty_List_Writeup.md)  | ![](https://img.shields.io/badge/MEDIUM-orange)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen) |
 | [Santa is forgetful!](./04_Santa_is_forgetful.md)  | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen) |
@@ -31,7 +32,7 @@
 
 
 ### หมวด Reverse Engineering 
-| โจทย์ | ระดับ |  |
+| โจทย์ | ระดับ | สถานะ |
 |----------|----------|----------|
 | [Secplaysomware#1](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  | 
 | [Secplaysomware#2](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |
