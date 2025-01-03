@@ -1,5 +1,3 @@
-## SEC Playground Bloody Xmas 2024: ศึกดวลทักษะสาย Security ส่งท้ายปี! 🎯
-
 <img src="./resources/01.png" alt="" style="width:50%;margin-left:auto;margin-right:auto;display:block;">
 
 <img src="./resources/02.jpg" alt="">
