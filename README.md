@@ -17,7 +17,7 @@
 
 ### หมวด Web Application 
 
-| โจทย์ | ระดับ | สถานะ |
+| โจทย์ | ระดับ |  |
 |----------|----------|----------|
 | [Bespoke Library](./01_Bespoke_Library_Writeup)  | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  | 
 | [Bespoke Library2](./02_Bespoke_Library2_Writeup.md)  | ![](https://img.shields.io/badge/MEDIUM-orange)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |
@@ -32,7 +32,8 @@
 
 
 ### หมวด Reverse Engineering 
-| โจทย์ | ระดับ | สถานะ |
+
+| โจทย์ | ระดับ |  |
 |----------|----------|----------|
 | [Secplaysomware#1](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  | 
 | [Secplaysomware#2](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |
