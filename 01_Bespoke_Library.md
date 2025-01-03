@@ -100,4 +100,6 @@ Server Class มีการรับ Input และแยกค่า Paramete
 - ฐานข้อมูล SQLite แม้จะเล็ก แต่หากมีการเก็บข้อมูลที่สำคัญ ต้องปกป้อง Connection String และคำสั่ง Query ให้ดี  
 
 ---
+###### #SECPlayground   #SECPlaygroundBloodyXMas2024 
+
 <a href="./"><<กลับหน้าหลัก</a>

@@ -93,7 +93,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./">1.Secplaysomware#1</a></td>
+      <td><a href="./rev_01_secplaysomware.html#section1">1.Secplaysomware#1</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
@@ -119,3 +119,6 @@
     </tr>
   </tbody>
 </table>
+
+###### Written by Kornpong.m
+###### #SECPlayground   #SECPlaygroundBloodyXMas2024 
