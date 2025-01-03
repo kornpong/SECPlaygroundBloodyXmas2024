@@ -1,6 +1,6 @@
 ## SEC Playground Bloody Xmas 2024: ศึกดวลทักษะสาย Security ส่งท้ายปี! 🎯
 
-<img src="https://raw.githubusercontent.com/kornpong/CTF/refs/heads/main/SECPlayground/BloodyXmas2024/resources/01.png" alt="" style="width:50%;margin-left:auto;margin-right:auto;display:block;">
+<img src="resources/01.png" alt="" style="width:50%;margin-left:auto;margin-right:auto;display:block;">
 
 <img src="https://raw.githubusercontent.com/kornpong/CTF/refs/heads/main/SECPlayground/BloodyXmas2024/resources/02.jpg" alt="">
 
