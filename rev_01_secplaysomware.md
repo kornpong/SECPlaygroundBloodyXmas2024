@@ -11,12 +11,13 @@
 ---
 
 ### **โจทย์ข้อที่ 1: ค่า hash ของไฟล์คืออะไร**
+<span id="section1"></span>
 เราดาวน์โหลดไฟล์ `Keygen.zip` และแตกไฟล์ออกมา ซึ่งไฟล์ที่ได้คือ `Keygen.exe` จากนั้นเราก็ใช้คำสั่ง `sha256sum` ใน Linux เพื่อหาค่า hash ของไฟล์นี้
 
 ```bash
 sha256sum Keygen.exe
 ```
-<img id="section1" src="./resources/96.png" alt="" style="width:80% !important;">
+<img  src="./resources/96.png" alt="" style="width:80% !important;">
 
 ตอบยังไงก็ผิดเพราะตัวอักษรตัวพิมพ์เล็ก จนมีข้อความจากระบบว่าต้องเป็นตัวพิมพ์ใหญ่
 
@@ -68,3 +69,6 @@ sha256sum Keygen.exe
 4. **ไฟล์ที่ถูกสร้าง**: UNLOCK_README.txt
 
 ---
+###### #SECPlayground   #SECPlaygroundBloodyXMas2024 
+
+<a href="./"><<กลับหน้าหลัก</a>  
