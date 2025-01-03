@@ -17,7 +17,7 @@
 
 เราทำการเปิดไฟล์ **Hello_World_1.exe** ด้วยโปรแกรม **ILSpy** ซึ่งเป็นเครื่องมือที่มีประโยชน์สำหรับการ reverse โปรแกรม .NET เพื่อศึกษาฟังก์ชันภายในโปรแกรม  
 
-<img src="./resources/113.png" alt="" style="width:80% !important;">
+<img src="./resources/113.png" alt="" style="width:90% !important;">
 
 หลังจากเปิดโปรแกรม, สิ่งที่พบคือมีฟังก์ชันหลักที่น่าสนใจดังนี้:
 
@@ -33,7 +33,7 @@
 2. secret key ที่ผู้ใช้ป้อนจะถูกส่งเข้าไปยังฟังก์ชัน **CheckKey** เพื่อทำการตรวจสอบ
 3. หาก **CheckKey** ยืนยันว่า key ถูกต้อง, ฟังก์ชัน **DecryptFlag** จะถูกเรียกใช้งานเพื่อ **print flag** ที่ซ่อนอยู่
 
-<img src="./resources/114.png" alt="" style="width:80% !important;">
+<img src="./resources/114.png" alt="" style="width:90% !important;">
 
 ## การหา Flag
 
@@ -42,7 +42,7 @@
 
 เราได้ **copy code** จากฟังก์ชัน **DecryptFlag** แล้ว **run** มันใน online-compiler เพื่อลดเวลาในการลองผิดลองถูก!
 
-<img src="./resources/115.png" alt="" style="width:80% !important;">
+<img src="./resources/115.png" alt="" style="width:90% !important;">
 
 ## ผลลัพธ์
 

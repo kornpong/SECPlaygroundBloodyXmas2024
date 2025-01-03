@@ -23,7 +23,7 @@ sha256sum Keygen.exe
 
 **คำตอบ**: (ค่า hash ที่ได้จากคำสั่ง sha256sum) 
 
-<img src="./resources/97.png" alt="" style="width:60% !important;">
+<img src="./resources/97.png" alt="" style="width:80% !important;">
 ---
 
 <span id="section2"></span>
@@ -31,11 +31,11 @@ sha256sum Keygen.exe
 ### **โจทย์ข้อที่ 2: โปรแกรม virus นี้เขียนด้วยภาษาอะไร**
 ในการหาคำตอบนี้ เราใช้โปรแกรม **Detect It Easy (DIE)** เพื่อวิเคราะห์ไฟล์ `Keygen.exe` และรู้ว่าโปรแกรมไวรัสนี้ถูกเขียนด้วย **Python**
 
-<img src="./resources/98.png" alt="" style="width:60% !important;">
+<img src="./resources/98.png" alt="" style="width:80% !important;">
 
 **คำตอบ**: Python
 
-<img src="./resources/99.png" alt="" style="width:60% !important;">
+<img src="./resources/99.png" alt="" style="width:80% !important;">
 ---
 
 <span id="section3"></span>
@@ -53,7 +53,7 @@ sha256sum Keygen.exe
 
 **คำตอบ**: qwerty
 
-<img src="./resources/103.png" alt="" style="width:60% !important;">
+<img src="./resources/103.png" alt="" style="width:80% !important;">
 
 ---
 
@@ -64,7 +64,7 @@ sha256sum Keygen.exe
 
 **คำตอบ**: UNLOCK_README.txt
 
-<img src="./resources/104.png" alt="" style="width:60% !important;">
+<img src="./resources/104.png" alt="" style="width:80% !important;">
 ---
 
 ## สรุปคำตอบ:

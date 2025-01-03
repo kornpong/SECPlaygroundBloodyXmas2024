@@ -4,7 +4,7 @@
 > 💪 **Difficulty**: 🔴 HARD  
 > 🎯 **Category**: Web Application Security
 
-<img src="./resources/47.png" alt="" style="width:60% !important;">
+<img src="./resources/47.png" alt="" style="width:80% !important;">
 
 ## การวิเคราะห์เบื้องต้น 🔍
 
@@ -13,7 +13,7 @@
 - แสดงผลในรูปแบบตารางที่มีข้อมูล ID, ชื่อหนังสือ และรายละเอียดอื่นๆ
 - ไม่มีฟอร์มการ login หรือระบบ authentication
 
-<img src="./resources/49.png" alt="" style="width:60% !important;">
+<img src="./resources/49.png" alt="" style="width:80% !important;">
 
 ## การสำรวจข้อมูล 🕵️
 
@@ -32,7 +32,7 @@ dirsearch -u http://35.240.216.137/
   
   ** *แต่ไม่ได้ช่วยอะไรเราได้เลย!*
 
-<img src="./resources/48.png" alt="" style="width:60% !important;">
+<img src="./resources/48.png" alt="" style="width:80% !important;">
 
 ## ขั้นตอนการโจมตี 🎯
 
@@ -72,7 +72,7 @@ dirsearch -u http://35.240.216.137/
 1' AND '.' = select substr(@@version,2,1) #
 ```
 
-<img src="./resources/50.png" alt="" style="width:60% !important;">
+<img src="./resources/50.png" alt="" style="width:80% !important;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ผลลัพท์ที่ได้:**
 - `@@version`: `5.7.33-0ubuntu0.16.04.1`
@@ -111,7 +111,7 @@ dirsearch -u http://35.240.216.137/
    - return output เป็น string
    - ไม่ต้อง compile UDF เพิ่ม
 
-<img src="./resources/53.png" alt="" style="width:60% !important;">
+<img src="./resources/53.png" alt="" style="width:80% !important;">
 
 **5. Testing Command Execution:**
 
@@ -124,16 +124,16 @@ dirsearch -u http://35.240.216.137/
 # Result
 สำเร็จ encode hex ออกมาได้ผลลัพท์ของ command : id เป็น user mysql
 ```
-<img src="./resources/51.png" alt="" style="width:60% !important;">
-<img src="./resources/52.png" alt="" style="width:60% !important;">
+<img src="./resources/51.png" alt="" style="width:80% !important;">
+<img src="./resources/52.png" alt="" style="width:80% !important;">
 
 ทดสอบลองเปลี่ยนเป็น command `ls` สามารถ execute ได้ แต่ `ls /` ไม่ได้ หรือจะติด space
 
-<img src="./resources/54.png" alt="" style="width:60% !important;">
+<img src="./resources/54.png" alt="" style="width:80% !important;">
 
 จึงเปลี่ยน เป็น `ls${IFS}/` ผลคือสำเร็จ สามารถใช้ ${IFS} แทนช่องว่างได้
 
-<img src="./resources/55.png" alt="" style="width:60% !important;">
+<img src="./resources/55.png" alt="" style="width:80% !important;">
 
 ต่อไปก็ไปลองคำสั่งอื่น ๆ เช่น `ls${IFS}book` , `ls${IFS}mysql` , `ls${IFS}/home` , `ls${IFS}/tmp`
 
@@ -171,12 +171,13 @@ dirsearch -u http://35.240.216.137/
    # Setup netcat listener
    nc -lvnp 4444
    ```
-<img src="./resources/58.png" alt="" style="width:60% !important;">
+   
+   <img src="./resources/58.png" alt="" style="width:90% !important;">
 
 2. **Generate Payload:**
    - ใช้ [revshells.com](https://www.revshells.com/) สร้าง payload
 
-<img src="./resources/58_2.png" alt="" style="width:60% !important;">
+<img src="./resources/58_2.png" alt="" style="width:80% !important;">
 
 #### 7. Payload Construction & Execution
 ขั้นตอนการสร้างและ execute reverse shell:
@@ -217,7 +218,8 @@ dirsearch -u http://35.240.216.137/
     ```
 
 - เอาใหม่อีกครั้ง encode ทั้งหมดนี้แหละ เป็น base64 ไปเลย ที่นี้เขียน code python ให้ช่วยแบ่ง payload ให้เลย
-    <img src="./resources/57.png" alt="" style="width:80% !important;">
+
+    <img src="./resources/57.png" alt="" style="width:90% !important;">
 
 
 - เมื่อส่ง payload ทั้งหมดแล้วก็ไปสั่ง decode ไฟล์ `a` ที่เป็น base64 กลับเป็นข้อความเดิม ด้วยคำสั่ง base64 -d แล้ว save เป็นไฟล์ใหม่ชื่อไฟล์ `b`
@@ -236,7 +238,7 @@ dirsearch -u http://35.240.216.137/
 สำเร็จ reverse shell ได้แล้ว ที่เหลือก็หาไฟล์ flag 
 
 ### Success! 🎉
-<img src="./resources/59.png" alt="" style="width:80% !important;">
+<img src="./resources/59.png" alt="" style="width:90% !important;">
 
 ได้ reverse shell สำเร็จและเริ่มการล้วงหาข้อมูล:
 
@@ -251,9 +253,9 @@ dirsearch -u http://35.240.216.137/
    ```bash
    cat /var/www/flag_xxx.txt
    ```
-<img src="./resources/60.png" alt="" style="width:60% !important;">
-<img src="./resources/61.png" alt="" style="width:60% !important;">
-<img src="./resources/62.png" alt="" style="width:60% !important;">
+<img src="./resources/60.png" alt="" style="width:80% !important;">
+<img src="./resources/61.png" alt="" style="width:80% !important;">
+<img src="./resources/62.png" alt="" style="width:80% !important;">
 
 ### ✅ บทสรุปจากโจทย์นี้
 
