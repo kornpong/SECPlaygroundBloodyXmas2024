@@ -32,47 +32,47 @@
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./02_Bespoke_Library2_Writeup.md">Bespoke Library2</a></td>
+      <td><a href="./02_Bespoke_Library2">Bespoke Library2</a></td>
       <td><img src="https://img.shields.io/badge/MEDIUM-orange" alt="MEDIUM"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./03_The_Naughty_List_Writeup.md">The Naughty List</a></td>
+      <td><a href="./03_The_Naughty_List">The Naughty List</a></td>
       <td><img src="https://img.shields.io/badge/MEDIUM-orange" alt="MEDIUM"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./04_Santa_is_forgetful.md">Santa is forgetful!</a></td>
+      <td><a href="./04_Santa_is_forgetful">Santa is forgetful!</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./05_Merry_Christmas.md">Merry Christmas</a></td>
+      <td><a href="./05_Merry_Christmas">Merry Christmas</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./06_Please_don't.md">Please don't</a></td>
+      <td><a href="./06_Please_don't">Please don't</a></td>
       <td><img src="https://img.shields.io/badge/MEDIUM-orange" alt="MEDIUM"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./07_BookClub.md">BookClub</a></td>
+      <td><a href="./07_BookClub">BookClub</a></td>
       <td><img src="https://img.shields.io/badge/HARD-FF0000" alt="HARD"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./08_Log_Christmas.md">Log Christmas</a></td>
+      <td><a href="./08_Log_Christmas">Log Christmas</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-unsolved-red" alt="Unsolved"></td>
     </tr>
     <tr>
-      <td><a href="./09_Santa_Math.md">Santa's Math</a></td>
+      <td><a href="./09_Santa_Math">Santa's Math</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-unsolved-red" alt="Unsolved"></td>
     </tr>
     <tr>
-      <td><a href="./10_Phantom_of_the_Network1.md">Phantom of the Network#1</a></td>
+      <td><a href="./10_Phantom_of_the_Network1">Phantom of the Network#1</a></td>
       <td><img src="https://img.shields.io/badge/MEDIUM-orange" alt="MEDIUM"></td>
       <td><img src="https://img.shields.io/badge/status-unsolved-red" alt="Unsolved"></td>
     </tr>
