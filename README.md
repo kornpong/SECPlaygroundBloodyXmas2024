@@ -27,7 +27,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./01_Bespoke_Library_Writeup">Bespoke Library</a></td>
+      <td><a href="./01_Bespoke_Library">Bespoke Library</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
