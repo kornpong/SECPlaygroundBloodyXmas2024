@@ -22,7 +22,7 @@
     <tr>
       <th>โจทย์</th>
       <th>ระดับ</th>
-      <th>สถานะ</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -80,26 +80,42 @@
 </table>
 
 
-| โจทย์ | ระดับ |  |
-|----------|----------|----------|
-| [Bespoke Library](./01_Bespoke_Library_Writeup)  | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  | 
-| [Bespoke Library2](./02_Bespoke_Library2_Writeup.md)  | ![](https://img.shields.io/badge/MEDIUM-orange)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |
-| [The Naughty List](./03_The_Naughty_List_Writeup.md)  | ![](https://img.shields.io/badge/MEDIUM-orange)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen) |
-| [Santa is forgetful!](./04_Santa_is_forgetful.md)  | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen) |
-| [Merry Christmas](./05_Merry_Christmas.md)  | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen) |
-| [Please don't](./06_Please_don't.md)  | ![](https://img.shields.io/badge/MEDIUM-orange)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen) |
-| [BookClub](./07_BookClub.md)  | ![](https://img.shields.io/badge/HARD-FF0000)  | ![Solved](https://img.shields.io/badge/status-solved-brightgreen) |
-| [Log Christmas](./08_Log_Christmas.md)  | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-unsolved-red) |
-| [Santa's Math](./09_Santa_Math.md) | ![](https://img.shields.io/badge/EASY-green)  | ![Solved](https://img.shields.io/badge/status-unsolved-red) |
-| [Phantom of the Network#1](./10_Phantom_of_the_Network1.md) | ![](https://img.shields.io/badge/MEDIUM-orange)  | ![Solved](https://img.shields.io/badge/status-unsolved-red)   | ![Solved](https://img.shields.io/badge/status-unsolved-red) |
-
 
 ### หมวด Reverse Engineering 
 
-| โจทย์ | ระดับ |  |
-|----------|----------|----------|
-| [Secplaysomware#1](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  | 
-| [Secplaysomware#2](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |
-| [Secplaysomware#3](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |  
-| [Secplaysomware#4](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |
-| [Hello World](./)  | ![](https://img.shields.io/badge/EASY-green)   | ![Solved](https://img.shields.io/badge/status-solved-brightgreen)  |  
+<table>
+  <thead>
+    <tr>
+      <th>โจทย์</th>
+      <th>ระดับ</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./">Secplaysomware#1</a></td>
+      <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
+      <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
+    </tr>
+    <tr>
+      <td><a href="./">Secplaysomware#2</a></td>
+      <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
+      <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
+    </tr>
+    <tr>
+      <td><a href="./">Secplaysomware#3</a></td>
+      <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
+      <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
+    </tr>
+    <tr>
+      <td><a href="./">Secplaysomware#4</a></td>
+      <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
+      <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
+    </tr>
+    <tr>
+      <td><a href="./">Hello World</a></td>
+      <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
+      <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
+    </tr>
+  </tbody>
+</table>
