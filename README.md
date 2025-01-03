@@ -98,22 +98,22 @@
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./">2.Secplaysomware#2</a></td>
+      <td><a href="./rev_01_secplaysomware.html#section2">2.Secplaysomware#2</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./">3.Secplaysomware#3</a></td>
+      <td><a href="./rev_01_secplaysomware.html#section3">3.Secplaysomware#3</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./">4.Secplaysomware#4</a></td>
+      <td><a href="./rev_01_secplaysomware.html#section4">4.Secplaysomware#4</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
     <tr>
-      <td><a href="./">5.Hello World</a></td>
+      <td><a href="./rev_02_helloworld">5.Hello World</a></td>
       <td><img src="https://img.shields.io/badge/EASY-green" alt="EASY"></td>
       <td><img src="https://img.shields.io/badge/status-solved-brightgreen" alt="Solved"></td>
     </tr>
