@@ -23,7 +23,8 @@
 #### **Port 8080 กับความลับที่ซ่อนอยู่**  
 - พบว่ารัน **Apache HTTP Server 2.4.49** ซึ่งมี **CVE-2021-41773** (ช่องโหว่ Path Traversal & Remote Code Execution) 🛠️  
 - เลือกใช้ **POC (Proof of Concept)** จาก **exploit-db** เพื่อเริ่มการโจมตี:  
-  [https://www.exploit-db.com/exploits/50383](https://www.exploit-db.com/exploits/50383)  <img src="./resources/91.png" alt="" style="width:60% !important;">
+  [https://www.exploit-db.com/exploits/50383](https://www.exploit-db.com/exploits/50383)  
+  <img src="./resources/91.png" alt="" style="width:60% !important;">
   <img src="./resources/92.png" alt="" style="width:60% !important;">
 
 ---
